@@ -1,12 +1,15 @@
+version: "3.9"
+
 services:
   blackfire:
     environment:
-      # Exposes BLACKFIRE_* environment variables from the host
       BLACKFIRE_LOG_LEVEL: 4
       BLACKFIRE_SERVER_ID: XXXX
       BLACKFIRE_SERVER_TOKEN: XXXX
       BLACKFIRE_CLIENT_ID: XXXX
       BLACKFIRE_CLIENT_TOKEN: XXXX
     networks:
-      - my-network-2
-      - my-network-2
+      - my-network
+networks:
+  my-network:
+    external: true
