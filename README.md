@@ -70,15 +70,21 @@ sudo service blackfire-agent restart
 
 ## Execute profiling
 
+### Via curl
+
 Inside the PHP container where the prob and backfire agent is installed, call your application. Examples:
 
 ```shell
-blackfire curl --title="DI container (Load) - With ServiceManager" http://test-tao-deploy-nginx
-blackfire curl --title="DI container (Load) - With SymfonyDI" http://test-tao-deploy-nginx
-
-blackfire curl --title="DI container (Login) - Without SymfonyDI implementation" http://test-tao-deploy-nginx 
-blackfire curl --title="DI container (Login) - With SymfonyDI implementation" http://test-tao-deploy-nginx 
+blackfire curl --title="My Profiling" http://my-local-url
 ```
+
+### Via Browser
+
+Install Blackfire plugin for Chrome: https://blackfire.io/docs/integrations/browsers/chrome 
+
+Now you will be able to profile using the new tool available:
+
+![Profile with Blackfire](misc/blackfire-tool.png)
 
 ## Check logs
 
