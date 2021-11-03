@@ -1,5 +1,9 @@
 ## Run inside the container
 
+### Setup your configs
+
+Create a copy of `docker-compose.override-sample.yml` as `docker-compose.override.yml` with your credentials and network to test.
+
 ### Run blackfire container
 
 ```shell

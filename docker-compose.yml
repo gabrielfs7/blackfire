@@ -4,15 +4,5 @@ services:
   blackfire:
     image: blackfire/blackfire:2
     container_name: blackfire
-    environment:
-      # Exposes BLACKFIRE_* environment variables from the host
-      BLACKFIRE_LOG_LEVEL: 4
-      BLACKFIRE_SERVER_ID: X
-      BLACKFIRE_SERVER_TOKEN: X
-      BLACKFIRE_CLIENT_ID: X
-      BLACKFIRE_CLIENT_TOKEN: X
-#    networks:
-#      - oat-docker
-#      - test-tao-deploy
     ports:
       - 8307
