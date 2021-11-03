@@ -1,16 +1,18 @@
-## Run inside the container
+# Blackfire
+
+The purpose of this repository is to help run **Blackfire** locally.
 
 ### Setup your configs
 
 Create a copy of `docker-compose.override-sample.yml` as `docker-compose.override.yml` with your credentials and network to test.
 
-### Run blackfire container
+### Start Blackfire container
 
 ```shell
 docker-compose up -d
 ```
 
-Connect your blackfire to the target container network
+Connect your blackfire to the `target container` network
 
 ```shell
 docker network connect myNetwork blackfire
