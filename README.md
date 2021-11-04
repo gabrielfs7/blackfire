@@ -31,10 +31,10 @@ apt-get update && apt-get install -y gnupg2
 After, install the agent:
 
 ```shell
-BLACKFIRE_CLIENT_ID="XXXXXX" \
-BLACKFIRE_CLIENT_TOKEN="XXXXXX" \
-BLACKFIRE_SERVER_ID="XXXXXX" \
-BLACKFIRE_SERVER_TOKEN="XXXXXX" \
+export BLACKFIRE_CLIENT_ID="XXXXXX" \
+export BLACKFIRE_CLIENT_TOKEN="XXXXXX" \
+export BLACKFIRE_SERVER_ID="XXXXXX" \
+export BLACKFIRE_SERVER_TOKEN="XXXXXX" \
 bash -c "$(curl -L https://installer.blackfire.io/installer.sh)"
 ```
 
@@ -70,6 +70,10 @@ In the PHP Application:
 rm -rf /var/run/blackfire/agent.sock
 sudo service blackfire-agent restart
 ```
+
+### Effect changes on server 
+
+Restart your PHP container 
 
 ## Execute profiling
 
