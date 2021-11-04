@@ -59,6 +59,7 @@ version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 
 ```shell
 sudo blackfire agent:config --server-id=XXXX --server-token=XXXX
+sudo blackfire client:config --client-id=XXXX --client-token=XXXX
 ```
 
 ## Restart agent
