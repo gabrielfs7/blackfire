@@ -55,6 +55,16 @@ version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 && rm -rf /tmp/blackfire /tmp/blackfire-probe.tar.gz
 ```
 
+or 
+
+```shell
+mkdir -p /tmp/blackfire \
+    && architecture=$(uname -m) \
+    && curl -A "Docker" -L https://blackfire.io/api/v1/releases/cli/linux/$architecture | tar zxp -C /tmp/blackfire \
+    && mv /tmp/blackfire/blackfire /usr/bin/blackfire \
+    && rm -Rf /tmp/blackfire
+```
+
 ## Config the agent
 
 ```shell
@@ -73,7 +83,11 @@ sudo service blackfire-agent restart
 
 ### Effect changes on server 
 
-Restart your PHP container 
+Restart your PHP container
+
+```shell
+docker container MY_CONTAINER restart
+```
 
 ## Execute profiling
 
